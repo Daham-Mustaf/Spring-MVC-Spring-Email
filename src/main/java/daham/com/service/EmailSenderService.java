@@ -46,10 +46,9 @@ public class EmailSenderService {
 
         FileSystemResource fileSystem
                 = new FileSystemResource(new File(attachment));
-
         mimeMessageHelper.addAttachment(fileSystem.getFilename(),
                 fileSystem);
         mailSender.send(mimeMessage);
-        System.out.println("Mail Send ...");
+        System.out.println("Email Sent Successfully");
     }
     }
